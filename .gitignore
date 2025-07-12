@@ -1,23 +1,64 @@
 # Dependencies
 node_modules/
 package-lock.json
+yarn.lock
 
-# Environment variables
+# Environment variables - SENSITIVE DATA
 .env
 .env.local
 .env.development.local
 .env.test.local
 .env.production.local
+.env.production
+.env.staging
+backend/.env
+frontend/.env
+
+# Sensitive configuration files
+config/production.json
+config/staging.json
+secrets.json
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Database credentials and URLs
+database.url
+*.db-url
 
 # Build outputs
 dist/
 build/
+frontend/build/
+backend/dist/
+*.tsbuildinfo
 
 # Logs
+logs/
+*.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 lerna-debug.log*
+.npm/_logs/
+
+# Prisma - Database related
+prisma/migrations/
+*.db
+*.sqlite
+*.sqlite3
+database.db
+
+# Stripe and Payment sensitive data
+stripe_keys.txt
+payment_logs/
+transactions.log
+
+# JWT and authentication secrets
+jwt_secret.txt
+auth_keys/
+certificates/
 
 # Runtime data
 pids
@@ -107,3 +148,79 @@ Thumbs.db
 
 # Prisma
 prisma/migrations/
+
+# Deployment and CI/CD sensitive files
+.vercel
+.railway
+.elestio
+.scaleway
+deploy_keys/
+ci_secrets/
+
+# Temporary files and folders
+temp/
+tmp/
+*.tmp
+*.temp
+.temp/
+
+# User uploads and data
+uploads/
+user_data/
+backups/
+
+# Local development files
+.local
+local_config.json
+dev_notes.txt
+test_data.json
+
+# Docker sensitive files
+docker-compose.override.yml
+.dockerignore.local
+
+# Cloud provider configs
+.aws/
+.gcp/
+.azure/
+
+# SSL Certificates
+*.crt
+*.ca-bundle
+ssl/
+
+# Root level node_modules (if any)
+/node_modules/
+/package-lock.json
+
+# VS Code specific settings (may contain personal configs)
+.vscode/settings.json
+.vscode/launch.json
+
+# Documentation that might contain sensitive URLs or keys
+*_PRIVATE.md
+*_SECRET.md
+*_CONFIDENTIAL.md
+
+# Backup files
+*.bak
+*.backup
+*.orig
+
+# Log files from testing
+test_*.log
+debug_*.log
+
+# Local testing credentials
+test_credentials.json
+local_auth.json
+
+# Any file with 'secret', 'key', or 'password' in the name
+*secret*
+*password*
+*credential*
+# Except for example files
+!*.example
+!*example*
+!*.sample
+!*sample*
